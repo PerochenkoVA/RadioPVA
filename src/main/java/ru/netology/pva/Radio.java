@@ -13,25 +13,20 @@ public class Radio {
     //Если текущая радиостанция - 9, нажал на кнопку next на пульте, то текущей должна стать 0-ая.
     public int setNext() {
         int setNext = 0;
-
         return setNext;
     }
 
     //Если текущая радиостанция - 0, нажал на кнопку prev на пульте, то текущей должна стать 9-ая.
     public int setPrev() {
         int setPrev = 0;
-
         return setPrev;
     }
 
     //Выставлять номер радиостанции с цифрового пульта (вводя числа 0 - 9) (сделайте сеттер)
-
     public int getStatNumber() {
         this.statNumber = statNumber;
         return statNumber;
-
     }
-
     public void setStatNumber(int statNumber) {
         this.statNumber = statNumber;
     }
@@ -45,9 +40,7 @@ public class Radio {
             volUp = 1;
         }
         this.volUp = volUp;
-
     }
-
     public int getVolUp() {
         return volUp;
     }
