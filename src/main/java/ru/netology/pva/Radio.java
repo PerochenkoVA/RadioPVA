@@ -4,22 +4,30 @@ public class Radio {
 
     private int numberStation;    //Номер текущей (прослушиваемой) радиостанции
     private int volume;           //Громкость звука
-    private int next = 9;          //Max звук
-    private int prev = 0;           // Min звук
+    private int maxVolume;          //Max звук
+    private int minVolume;           // Min звук
     private int statNumber;
     private int volUp;              //звук
     private int volDown;
 
     //Если текущая радиостанция - 9, нажал на кнопку next на пульте, то текущей должна стать 0-ая.
-    public int setNext() {
-        int setNext = 0;
-        return setNext;
+    public void setMaxVolume(int maxVolume) {
+        if (maxVolume > 9) {
+            maxVolume = 0;
+        }
+    }
+    public int getMaxVolume() {
+        return maxVolume;
     }
 
-    //Если текущая радиостанция - 0, нажал на кнопку prev на пульте, то текущей должна стать 9-ая.
-    public int setPrev() {
-        int setPrev = 0;
-        return setPrev;
+    //Если текущая радиостанция - 1, нажал на кнопку prev на пульте, то текущей должна стать 9-ая.
+    public void setMinVolume(int maxVolume) {
+        if (minVolume<1){
+            minVolume= 9;
+        }
+    }
+    public int getMinVolume(){
+        return minVolume;
     }
 
     //Выставлять номер радиостанции с цифрового пульта (вводя числа 0 - 9) (сделайте сеттер)

@@ -9,15 +9,16 @@ class RadioTest {
     @Test
     public void setMoreMaximum(){
         Radio voise = new Radio();
-        voise.setNext();
-        assertEquals(0,voise.setNext());
+        voise.setMaxVolume(11);
+
+        assertEquals(0,voise.getMaxVolume());
     }
 
     @Test
     public void setMoreMinimum(){
         Radio voise = new Radio();
-        voise.setPrev();
-        assertEquals(0,voise.setPrev());
+        voise.setMinVolume(0);
+        assertEquals(9,voise.getMinVolume());
     }
     @Test
     public void instalStation(){
