@@ -16,17 +16,19 @@ public class Radio {
             maxVolume = 0;
         }
     }
+
     public int getMaxVolume() {
         return maxVolume;
     }
 
     //Если текущая радиостанция - 1, нажал на кнопку prev на пульте, то текущей должна стать 9-ая.
     public void setMinVolume(int maxVolume) {
-        if (minVolume<1){
-            minVolume= 9;
+        if (minVolume < 1) {
+            minVolume = 9;
         }
     }
-    public int getMinVolume(){
+
+    public int getMinVolume() {
         return minVolume;
     }
 
@@ -35,6 +37,7 @@ public class Radio {
         this.statNumber = statNumber;
         return statNumber;
     }
+
     public void setStatNumber(int statNumber) {
         this.statNumber = statNumber;
     }
@@ -49,6 +52,7 @@ public class Radio {
         }
         this.volUp = volUp;
     }
+
     public int getVolUp() {
         return volUp;
     }
@@ -56,13 +60,14 @@ public class Radio {
     //Регулировка громкости по минимуму (с 1 на 10)
     public void setVolDown(int volDown) {
         if (volDown < 10) {
-            volDown = volDown-1;
+            volDown = volDown - 1;
         }
-        if (volDown <1) {
+        if (volDown < 1) {
             volDown = 10;
         }
         this.volDown = volDown;
     }
+
     public int getVolDown() {
         return volDown;
     }
