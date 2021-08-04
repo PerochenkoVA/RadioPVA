@@ -38,7 +38,7 @@ class RadioTest {
     @Test
     public void useRadioUpVolume() {
         Radio radio = new Radio("Netology", 2, 100, 1, 99);
-        assertEquals(1, radio.getVolume1());
+        assertEquals(0, radio.getVolume1());
     }
 
     @Test
