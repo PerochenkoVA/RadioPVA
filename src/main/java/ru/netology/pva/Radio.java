@@ -1,11 +1,8 @@
 package ru.netology.pva;
 
-import javax.naming.Name;
-
 public class Radio {
 
-
-    private int numberStation;    //Номер текущей (прослушиваемой) радиостанции
+    private int numberStation;
     private int volume;
     private int maxVolume = 10;
     private int minVolume = 2;
@@ -20,102 +17,100 @@ public class Radio {
     public Radio() {
     }
 
-    public Radio (int numberStation, int statNumber){
+    public Radio(int numberStation) {
 
-        numberStation = numberStation+statNumber;
-        if (numberStation>maxStation){
-            numberStation=minStation;
+        numberStation = numberStation + 1;
+        if (numberStation > maxStation) {
+            numberStation = minStation;
         }
-        if (numberStation<minStation){
-            numberStation=maxStation;
+        if (numberStation < minStation) {
+            numberStation = maxStation;
         }
         this.numberStation = numberStation;
     }
-        public int getNumberStation() {return numberStation;}
 
-    //public void setNumberStation(int numberStation) {this.numberStation = numberStation;}
-    public int getVolume() {return volume;}
-   // public void setVolume(int volume) {this.volume = volume;}
-    public int getMaxVolume() {return maxVolume;}
-  //  public void setMaxVolume(int maxVolume) {this.maxVolume = maxVolume;}
-    public int getMinVolume() {return minVolume;}
-  //  public void setMinVolume(int minVolume) {this.minVolume = minVolume;}
-    public int getStatNumber() {return statNumber;}
-   // public void setStatNumber(int statNumber) {this.statNumber = statNumber;}
-    public int getVolUp() {return volUp;}
-   // public void setVolUp(int volUp) {this.volUp = volUp;}
-    public int getVolDown() {return volDown;}
-   // public void setVolDown(int volDown) {this.volDown = volDown;}
-    public boolean isOn() {return on;}
-   // public void setOn(boolean on) {this.on = on;}
-    public String getName() {return name;}
-   // public void setId(String name) {this.name = name;}
-    public int getMaxStation() {return maxStation;}
-   // public void setMaxStation(int maxStation) {this.maxStation = maxStation;}
-    public int getMinStation() {return minStation;}
-    //public void setMinStation(int minStation) {this.minStation = minStation;}
-}
-
-
-   /* //Регулировка громкости по максимуму (с 10 на 1)
-    public void setVolUp(int volUp) {
-        if (volUp < 10) {
-            volUp = volUp + 1;
-        }
-        if (volUp > 10) {
-            volUp = 1;
-        }
-        this.volUp = volUp;
+    public int getNumberStation() {
+        return numberStation;
     }
-    //Регулировка громкости по минимуму (с 1 на 10)
-    public void setVolDown(int volDown) {
-        if (volDown < 10) {
-            volDown = volDown - 1;
-        }
-        if (volDown < 1) {
-            volDown = 10;
-        }
-        this.volDown = volDown;
-    }
-*/
 
-/*
-public Radio(int numberStation, int volume, int maxVolume, int minVolume, int maxStation, int minStation, int statNumber, int volUp, int volDown, boolean on, String name) {
-        this.numberStation = numberStation;
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
+    public void setMaxVolume(int maxVolume) {
         this.maxVolume = maxVolume;
+    }
+
+    public int getMinVolume() {
+        return minVolume;
+    }
+
+    public void setMinVolume(int minVolume) {
         this.minVolume = minVolume;
-        this.maxStation = maxStation;
-        this.minStation = minStation;
+    }
+
+    public int getStatNumber() {
+        return statNumber;
+    }
+
+    public void setStatNumber(int statNumber) {
         this.statNumber = statNumber;
+    }
+
+    public int getVolUp() {
+        return volUp;
+    }
+
+    public void setVolUp(int volUp) {
         this.volUp = volUp;
+    }
+
+    public int getVolDown() {
+        return volDown;
+    }
+
+    public void setVolDown(int volDown) {
         this.volDown = volDown;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
         this.on = on;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setId(String name) {
         this.name = name;
     }
 
-    public Radio (String name, int volUp, int maxVolume, int minVolume, int volume1) {
-        this.volUp = volUp;
-        this.volDown = volDown;
-        this.minVolume = minVolume;
-        this.maxVolume = maxVolume;
-        volume1 = volume1 + volUp;
-        if (volume1 > maxVolume) {
-            volume1 = minVolume;
-        }
+    public int getMaxStation() {
+        return maxStation;
     }
 
-    public Radio(int volDown, int minVolume, int maxVolume, int volume) {
-
-        this.volUp = volUp;
-        this.volDown = volDown;
-        this.minVolume = minVolume;
-        this.maxVolume = maxVolume;
-        volume2 = volume2 - volDown;
-        if (volume2 < minVolume) {
-            volume2 = maxVolume;
-        }
+    public void setMaxStation(int maxStation) {
+        this.maxStation = maxStation;
     }
-*/
 
+    public int getMinStation() {
+        return minStation;
+    }
 
+    public void setMinStation(int minStation) {
+        this.minStation = minStation;
+    }
+}
