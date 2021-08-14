@@ -8,27 +8,30 @@ class RadioTest {
     @Test
     public void shouldUseDefaultConstructor() {
         Radio radio = new Radio();
-        assertEquals(0, radio.getNumberStation());
-        assertEquals(0, radio.getVolume());
+        assertEquals(1, radio.getVolume());
         assertEquals(10, radio.getMaxVolume());
         assertEquals(2, radio.getMinVolume());
         assertEquals(10, radio.getMaxStation());
         assertEquals(0, radio.getMinStation());
-        assertEquals(0, radio.getStatNumber());
-        assertEquals(0, radio.getVolUp());
-        assertEquals(0, radio.getVolDown());
-        assertEquals(false, radio.isOn());
+        assertEquals(10, radio.getStatNumber());
+        assertEquals(1, radio.getVolUp());
+        assertEquals(1, radio.getVolDown());
+        assertEquals(true, radio.isOn());
         assertEquals("Petrov", radio.getName());
+    }
+    @Test
+    public void RadioStatNumber(){
+        Radio radio = new Radio(6);
+        assertEquals(6,radio.getStatNumber());
     }
 
 
-    @Test
+ /*   @Test
     public void RadioStationUp() {
         Radio radio = new Radio(10);
 
         assertEquals(0, radio.getNumberStation());
-    }
-
+    }*/
 
 
 }

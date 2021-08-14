@@ -2,35 +2,38 @@ package ru.netology.pva;
 
 public class Radio {
 
-    private int numberStation;
-    private int volume;
+    private int numberStation=2;
+    private int volume=1;
     private int maxVolume = 10;
     private int minVolume = 2;
     private int maxStation = 10;
     private int minStation = 0;
-    private int statNumber;
-    private int volUp;
-    private int volDown;
-    private boolean on;
+    private int statNumber=10;
+    private int volUp=1;
+    private int volDown=1;
+    private boolean on= true;
     private String name = "Petrov";
 
     public Radio() {
     }
 
-    public Radio(int numberStation) {
+    public Radio(int statNumber){
+        this.statNumber=statNumber;
+    }
+/*    public Radio(int numberStation) {
 
         numberStation = numberStation + 1;
         if (numberStation > maxStation) {
             numberStation = minStation;
         }
         this.numberStation = numberStation;
-    }
+    }*/
 
     public int getNumberStation() {
 
         return numberStation;
     }
-    public int getVolume() {
+    public int getVolume(){
         return volume;
     }
     public int getMaxVolume() {
