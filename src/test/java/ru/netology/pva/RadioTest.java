@@ -16,14 +16,13 @@ class RadioTest {
         assertEquals(10, radio.getStatNumber());
         assertEquals(1, radio.getVolUp());
         assertEquals(1, radio.getVolDown());
-        assertEquals(true, radio.isOn());
         assertEquals("Petrov", radio.getName());
     }
 
     @Test
     public void RadioStationUp() {
-        Radio radio = new Radio(10);
-        assertEquals(0, radio.getNumberStation());
+        Radio radio = new Radio(9);
+        assertEquals(10, radio.getNumberStation());
 
     }
 }
