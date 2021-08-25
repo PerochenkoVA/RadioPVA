@@ -19,20 +19,12 @@ class RadioTest {
         assertEquals(true, radio.isOn());
         assertEquals("Petrov", radio.getName());
     }
+
     @Test
-    public void RadioStatNumber(){
-        Radio radio = new Radio(6);
-        assertEquals(6,radio.getStatNumber());
-    }
-
-
- /*   @Test
     public void RadioStationUp() {
         Radio radio = new Radio(10);
-
         assertEquals(0, radio.getNumberStation());
-    }*/
 
-
+    }
 }
 
