@@ -21,8 +21,8 @@ class RadioTest {
 
     @Test
     public void RadioStationUp() {
-        Radio radio = new Radio(9);
-        assertEquals(10, radio.getNumberStation());
+        Radio radio = new Radio(10);
+        assertEquals(0, radio.getNumberStation());
 
     }
 }
