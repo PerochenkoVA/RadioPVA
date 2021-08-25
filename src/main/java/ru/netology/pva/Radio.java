@@ -1,20 +1,13 @@
 package ru.netology.pva;
 
-import javax.naming.Name;
-
 public class Radio {
 
 
     private int numberStation;
-    private int volume;
-    private int maxVolume = 10;
-    private int minVolume = 2;
+    private int volume = 5;
     private int maxStation = 10;
     private int minStation = 0;
     private int statNumber;
-    private int volUp;
-    private int volDown;
-    private boolean on;
     private String name = "Petrov";
 
     public Radio() {
@@ -36,45 +29,47 @@ public class Radio {
         return numberStation;
     }
 
+    public void setNumberStation(int numberStation) {
+        this.numberStation = numberStation;
+    }
 
     public int getVolume() {
         return volume;
     }
 
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public int getStatNumber() {
-        return statNumber;
-    }
-
-    public int getVolUp() {
-        return volUp;
-    }
-
-    public int getVolDown() {
-        return volDown;
-    }
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public String getName() {
-        return name;
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     public int getMaxStation() {
         return maxStation;
     }
 
+    public void setMaxStation(int maxStation) {
+        this.maxStation = maxStation;
+    }
+
     public int getMinStation() {
         return minStation;
     }
 
+    public void setMinStation(int minStation) {
+        this.minStation = minStation;
+    }
+
+    public int getStatNumber() {
+        return statNumber;
+    }
+
+    public void setStatNumber(int statNumber) {
+        this.statNumber = statNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
