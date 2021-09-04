@@ -9,8 +9,11 @@ public class Radio {
     private int minStation = 0;
     private int statNumber;
     private String name = "Petrov";
+    private int volUp=1;
+    private int volDown;
 
     public Radio() {
+
     }
 
     public Radio(int numberStation, int statNumber) {
@@ -24,6 +27,11 @@ public class Radio {
         }
         this.numberStation = numberStation;
     }
+    public Radio (int volume) {
+        volume=volUp+volume;
+      return;
+    }
+
 
     public int getNumberStation() {
         return numberStation;
@@ -58,11 +66,14 @@ public class Radio {
     }
 
     public int getStatNumber() {
-        return statNumber;
+
+    return statNumber;
     }
 
     public void setStatNumber(int statNumber) {
-        this.statNumber = statNumber;
+
+    this.statNumber = statNumber;
+    return;
     }
 
     public String getName() {
@@ -71,5 +82,20 @@ public class Radio {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public int getVolUp() {
+        return volUp;
+    }
+
+    public void setVolUp(int volUp) {
+        this.volUp = volUp;
+    }
+
+    public int getVolDown() {
+        return volDown;
+    }
+
+    public void setVolDown(int volDown) {
+        this.volDown = volDown;
     }
 }

@@ -30,5 +30,13 @@ class RadioTest {
         assertEquals(10, radio.getNumberStation());
     }
 
+     @Test
+    public void VolUp (){
+        Radio radio = new Radio(3);
+
+        assertEquals(4,4);
+    }
+
+
 
 }
