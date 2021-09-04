@@ -15,15 +15,25 @@ public class Radio {
     private boolean on = true;
     private String name = "Petrov";
 
+    public Radio(int numberStation, int volume, int maxVolume, int minVolum, int maxStation, int minStation, int statNumber, int volUp, int volDown, boolean on, String name) {
+        this.numberStation = numberStation;
+        this.volume = volume;
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.maxStation = maxStation;
+        this.minStation = minStation;
+        this.statNumber = statNumber;
+        this.volUp = volUp;
+        this.volDown = volDown;
+        this.on = on;
+        this.name = name;
+    }
+
     public Radio() {
     }
 
-    public Radio(int numberStation) {
-        numberStation +=1;
-        if (maxStation< numberStation) {
-            numberStation = minStation;
-        }
-        this.numberStation = numberStation;
+    public Radio(int statNumber) {
+        statNumber = statNumber + volume;
 
     }
 
@@ -111,5 +121,8 @@ public class Radio {
         return name;
     }
 
-}
+    public void setName(String name) {
+        this.name = name;
+    }
 
+}
